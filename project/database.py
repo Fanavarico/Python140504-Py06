@@ -1,0 +1,1 @@
+from sqlalchemy import create_enginefrom sqlalchemy.orm import declerative_base, sessionmakerengine  = create_engine('sqlit:///quiz.db',echo=True)SessionLocal = sessionmaker(bind=engine,autoflash = False, autocommit=False)Base = declerative_base()def get_db():    return SessionLocal()#engine --> quiz.db#sessionlocal --> engine #base 
